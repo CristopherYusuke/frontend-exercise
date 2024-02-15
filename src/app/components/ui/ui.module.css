@@ -1,0 +1,20 @@
+.logoWrapper {
+  font-style: italic;
+  position: relative;
+  padding: 1rem;
+}
+
+.imageSubTitle {
+  position: absolute;
+  content: "Planets";
+  font-size: 2rem;
+  left: 6rem;
+  bottom: 1px;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: white;
+  color: black;
+}
+
+.teste {
+  border: red solid 1px;
+}

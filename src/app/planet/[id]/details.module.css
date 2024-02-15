@@ -1,0 +1,23 @@
+.planetDetails {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  width: 100%;
+  height: 100%;
+  background-image: url("/planet.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 5rem;
+  padding: 1rem;
+}
+
+.starWars {
+  color: #feda4a;
+  font-family: "Pathway Gothic One", sans-serif;
+}

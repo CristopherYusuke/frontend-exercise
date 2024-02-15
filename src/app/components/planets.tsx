@@ -46,24 +46,29 @@ export default function Planets() {
 
   return (
     <div>
-      <h1> planets </h1>
-      <input value={params.search} onChange={handleOnChangeSearch} />
+      <label htmlFor="search"> Search : </label>
+      <input
+        id="search"
+        className={style.searchInput}
+        value={params.search}
+        onChange={handleOnChangeSearch}
+      />
       {isLoading ? (
         <p> loading ... </p>
       ) : (
         data && (
           <>
             <div className={style.cardList}>
-              {data?.results?.map((planet, index) => (
+              {data.results?.map((planet, index) => (
                 <PlanetCard key={planet.name + index} planet={planet} />
               ))}
             </div>
-            {!data?.results ||
+            {!data.results ||
               (data.results.length === 0 && <p> no items found</p>)}
-            {data?.previous && (
+            {data.previous && (
               <button onClick={handleOnClick(data.previous)}>previous</button>
             )}
-            {data?.next && (
+            {data.next && (
               <button onClick={handleOnClick(data.next)}>next</button>
             )}
           </>
