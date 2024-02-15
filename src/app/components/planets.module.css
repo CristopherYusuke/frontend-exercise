@@ -7,3 +7,16 @@
 .searchInput {
   margin: 1rem;
 }
+
+.button {
+  padding: 1rem;
+}
+
+.buttonNext {
+  align-self: flex-end;
+}
+
+.groupButton {
+  display: flex;
+  justify-content: space-between;
+}

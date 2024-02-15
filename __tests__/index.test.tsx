@@ -63,6 +63,4 @@ describe("removeEmptyStringObject function", () => {
     const result = removeEmptyStringObject(obj);
     expect(result).toEqual(obj);
   });
-
-  // Add more tests if needed
 });

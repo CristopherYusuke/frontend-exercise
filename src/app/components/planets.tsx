@@ -65,12 +65,23 @@ export default function Planets() {
             </div>
             {!data.results ||
               (data.results.length === 0 && <p> no items found</p>)}
-            {data.previous && (
-              <button onClick={handleOnClick(data.previous)}>previous</button>
-            )}
-            {data.next && (
-              <button onClick={handleOnClick(data.next)}>next</button>
-            )}
+
+            <div className={style.groupButton}>
+              <button
+                disabled={!data.previous}
+                className={style.button + " " + style.buttonPrev}
+                onClick={handleOnClick(data.previous)}
+              >
+                previous
+              </button>
+              <button
+                disabled={!data.next}
+                className={style.button + " " + style.buttonPrev}
+                onClick={handleOnClick(data.next)}
+              >
+                next
+              </button>
+            </div>
           </>
         )
       )}
