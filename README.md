@@ -1,14 +1,14 @@
 # Flecto: Frontend Exercise
 
-Welcome to the Flecto frontend exercise! In this exercise, you'll be building a single-page application to display a paginated list of named planets from Star Wars.
+Hi dear github user, this repo is an code challage for [Flect.io](https://flecto.io/). with object to build and SPA implemeting the SWAPI and showing the planets and details of it
 
-the SPA was made with
+## tech stack
 
 - [Next.js](https://nextjs.org/)
+- [tanStack query](https://tanstack.com/query/latest)
 - [TypeScript](https://www.typescriptlang.org/)
 - [CSS modules](https://nextjs.org/docs/app/building-your-application/styling/css-modules)
 - [Jest](https://jestjs.io/)
-- [tanStack query](https://tanstack.com/query/latest) (Aka React query)
 
 ## Getting Started
 
