@@ -7,6 +7,12 @@ import { useQuery } from "@tanstack/react-query";
 import { getPlanetById } from "@/server/swapi";
 import { IPlanet } from "@/util/models";
 
+export const fieldNormilize = (field: string) => {
+  return field.replace("_", " ").replace(/(\w)(\w*)/g, function (g0, g1, g2) {
+    return g1.toUpperCase() + g2.toLowerCase();
+  });
+};
+
 export default function PlanetDetails({ params }: { params: { id: string } }) {
   const { data, error, isLoading } = useQuery({
     queryKey: ["planet", params.id],
@@ -21,12 +27,6 @@ export default function PlanetDetails({ params }: { params: { id: string } }) {
     "created",
     "edited",
   ];
-
-  const fieldNormilize = (field: string) => {
-    return field.replace("_", " ").replace(/(\w)(\w*)/g, function (g0, g1, g2) {
-      return g1.toUpperCase() + g2.toLowerCase();
-    });
-  };
 
   return (
     <div className={style.planetDetails}>
@@ -50,13 +50,6 @@ export default function PlanetDetails({ params }: { params: { id: string } }) {
             })}
         </section>
       )}
-      {/* <Image
-        alt="planet icon"
-        className={style.imagePlanet}
-        src="/planet.svg"
-        width={1000}
-        height={1000}
-      /> */}
     </div>
   );
 }
